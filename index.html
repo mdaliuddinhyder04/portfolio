@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mohammed Aliuddin Hyder — Data Engineer & Data Analyst portfolio. Python, SQL, PySpark, Databricks, Delta Lake, Apache Airflow, AWS S3, Pandas, Power BI and Tableau.">
+<title>Hyder — Data Engineer & Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f5f0e8;--ink:#0e0c09;--rust:#c84b2f;--gold:#b8862e;--mid:#746e65;--light:#e8e1d3;--rule:#d4cbbf;--green:#3e7652}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden}
+a{color:inherit}.cursor{width:10px;height:10px;border-radius:50%;background:var(--rust);position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:.2s ease;mix-blend-mode:multiply}
+body:has(a:hover) .cursor,body:has(button:hover) .cursor{width:38px;height:38px;opacity:.3}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 5%;background:rgba(245,240,232,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav-logo{font:700 22px 'Playfair Display',serif;text-decoration:none}.nav-logo span{color:var(--rust)}
+nav ul{display:flex;gap:30px;list-style:none}nav ul a{font:11px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:2px;color:var(--mid);text-decoration:none}
+nav ul a:hover{color:var(--rust)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.02fr .98fr;padding-top:70px}
+.hero-left{padding:80px 5%;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--rule)}
+.eyebrow,.divider-label,.section-num,.skill-sub,.project-tag,.contact-link,.btn,.stat-label,.edu-tag,.metric-label{font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:2px}
+.eyebrow{font-size:11px;color:var(--rust);margin-bottom:28px;display:flex;gap:12px;align-items:center}.eyebrow:before{content:'';width:30px;height:1px;background:var(--rust)}
+.hero h1{font:900 clamp(48px,6vw,86px)/.92 'Playfair Display',serif;letter-spacing:-2px;margin-bottom:34px}.hero h1 em{color:var(--rust)}
+.hero-desc{font-size:17px;line-height:1.75;color:var(--mid);max-width:520px;margin-bottom:42px;border-left:2px solid var(--rust);padding-left:20px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;font-size:10px;text-decoration:none;border:1px solid var(--ink);transition:.25s}.btn.primary{background:var(--ink);color:var(--cream)}.btn.primary:hover{background:var(--rust);border-color:var(--rust)}.btn:hover{background:var(--ink);color:var(--cream)}
+.hero-right{position:relative;display:flex;flex-direction:column;justify-content:flex-end;background:var(--ink);overflow:hidden;padding:60px 5%}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:40px 40px}
+.big-letter{position:absolute;top:-50px;left:-20px;font:900 390px/1 'Playfair Display',serif;color:rgba(255,255,255,.035)}
+.pipeline-art{position:absolute;top:15%;left:10%;right:10%;height:45%;z-index:1;display:flex;flex-direction:column;gap:13px;justify-content:center}
+.pipe-row{display:flex;align-items:center;gap:10px}.node{padding:10px 13px;border:1px solid rgba(255,255,255,.18);color:#f5f0e8;font:10px 'DM Mono',monospace;letter-spacing:1px;background:rgba(255,255,255,.035)}.arrow{color:var(--rust)}
+.hero-stats{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1)}
+.stat{background:var(--ink);padding:28px}.stat-num{font:900 42px 'Playfair Display',serif;color:var(--cream)}.stat-num span{color:var(--rust)}.stat-label{font-size:9px;color:var(--mid);margin-top:7px}
+section{padding:82px 0}.divider{display:flex;align-items:center;gap:22px;padding:0 5%;margin:0 0 42px}.divider-line{height:1px;background:var(--rule);flex:1}.divider-label{font-size:9px;color:var(--mid);white-space:nowrap}
+.section-head{padding:0 5%;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:44px}.section-head h2{font:900 clamp(34px,4vw,54px)/1 'Playfair Display',serif;letter-spacing:-1.5px}.section-head h2 em{color:var(--rust)}.section-num{font-size:10px;color:var(--mid)}
+.about-grid,.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;padding:0 5%}.about-body{font-size:18px;line-height:1.85}.about-body p+p{margin-top:22px}
+.sidebar-block{border-top:1px solid var(--rule);padding:20px 0}.sidebar-block:last-child{border-bottom:1px solid var(--rule)}.sidebar-key{font:10px 'DM Mono',monospace;letter-spacing:2px;color:var(--rust);text-transform:uppercase;margin-bottom:7px}.sidebar-val{font-size:15px;font-weight:500}
+#education{background:var(--ink);color:var(--cream)}#education .divider-line{background:rgba(255,255,255,.12)}#education .divider-label,#education .section-num{color:#80796f}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1);margin:0 5%}.edu-card{background:var(--ink);padding:42px 36px;position:relative;overflow:hidden}.edu-card:hover{background:#191612}.edu-degree{font:700 28px 'Playfair Display',serif;margin-bottom:10px}.edu-institute{color:var(--mid);font-size:14px}.edu-meta{margin-top:22px}.edu-tag{font-size:9px;padding:6px 10px;border:1px solid rgba(255,255,255,.14)}.edu-cgpa{font:italic 14px 'Playfair Display',serif;color:var(--rust);margin-top:17px}
+.projects{padding:0 5%}.project{display:grid;grid-template-columns:70px 1fr auto;gap:30px;padding:34px 0;border-top:1px solid var(--rule);text-decoration:none}.project:last-child{border-bottom:1px solid var(--rule)}.project:hover{padding-left:10px}.project-num{font:italic 38px 'Playfair Display',serif;color:var(--rule)}.project-name{font:700 25px 'Playfair Display',serif;margin-bottom:8px}.project:hover .project-name{color:var(--rust)}.project-desc{font-size:14px;line-height:1.65;color:var(--mid);max-width:760px}.project-tag{display:block;font-size:9px;color:var(--rust);margin-top:10px}.project-arrow{font-size:23px;color:var(--rule);align-self:center}
+#skills{background:var(--light)}.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);margin:0 5%}.skill{background:var(--light);padding:30px 20px;min-height:135px}.skill:hover{background:var(--cream)}.skill-icon{font-size:26px}.skill-name{font:700 18px 'Playfair Display',serif;margin-top:10px}.skill-sub{font-size:9px;color:var(--mid);margin-top:5px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);margin:0 5%;gap:1px;background:var(--rule)}.metric{background:var(--cream);padding:25px}.metric-value{font:900 30px 'Playfair Display',serif}.metric-label{font-size:8px;color:var(--mid);margin-top:5px}
+.contact-headline{font:900 clamp(30px,3.5vw,48px)/1.05 'Playfair Display',serif;letter-spacing:-1.5px;margin-bottom:22px}.contact-headline em{color:var(--rust)}.contact-sub{font-size:15px;color:var(--mid);line-height:1.7;margin-bottom:32px}.contact-link{display:flex;align-items:center;gap:10px;padding:15px 0;border-bottom:1px solid var(--rule);font-size:10px;text-decoration:none}.contact-link:first-of-type{border-top:1px solid var(--rule)}.contact-link:hover{color:var(--rust)}
+.form-field{margin-bottom:23px}.form-field label{display:block;font:9px 'DM Mono',monospace;letter-spacing:2px;text-transform:uppercase;color:var(--mid);margin-bottom:7px}.form-field input,.form-field textarea{width:100%;padding:12px 0;background:transparent;border:0;border-bottom:1px solid var(--rule);font:16px 'DM Sans',sans-serif;outline:none}.form-field textarea{height:105px;resize:vertical}.form-field input:focus,.form-field textarea:focus{border-bottom-color:var(--rust)}.send{padding:15px 28px;background:var(--ink);color:var(--cream);border:0;font:10px 'DM Mono',monospace;letter-spacing:2px;text-transform:uppercase;cursor:pointer}.send:hover{background:var(--rust)}#form-status{margin-top:12px;font-size:13px}
+footer{background:var(--ink);color:var(--cream);padding:34px 5%;display:flex;justify-content:space-between;align-items:center}.footer-logo{font:700 20px 'Playfair Display',serif}.footer-logo span{color:var(--rust)}.footer-copy{font:9px 'DM Mono',monospace;letter-spacing:2px;color:var(--mid)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:900px){nav ul{display:none}.hero{grid-template-columns:1fr}.hero-right{min-height:470px}.about-grid,.contact-wrap,.edu-grid{grid-template-columns:1fr;gap:45px}.skills-grid{grid-template-columns:repeat(2,1fr)}.metrics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.hero-left{padding-top:65px}.hero h1{font-size:49px}.pipeline-art{top:9%;left:5%;right:5%}.node{font-size:8px;padding:8px 9px}.hero-right{min-height:410px}.stat{padding:21px}.stat-num{font-size:34px}.project{grid-template-columns:42px 1fr auto;gap:15px}.project-num{font-size:29px}.project-name{font-size:21px}.skills-grid{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:1fr 1fr}.contact-wrap{gap:35px}footer{flex-direction:column;gap:12px;text-align:center}}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+
+<nav>
+<a class="nav-logo" href="#top">Hyder<span>.</span></a>
+<ul>
+<li><a href="#about">About</a></li><li><a href="#education">Education</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<main id="top">
+<section class="hero">
+<div class="hero-left">
+<div class="eyebrow reveal">Data Engineering · Analytics · 2026</div>
+<h1 class="reveal">Data<br><em>Engineer</em><br>& Analyst</h1>
+<p class="hero-desc reveal">I build reliable data pipelines and analytics-ready systems using Python, SQL, PySpark, Databricks, Delta Lake and Apache Airflow — turning raw data into trusted, usable insights.</p>
+<div class="hero-btns reveal">
+<a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">↓ Resume</a>
+<a class="btn" href="https://github.com/mdaliuddinhyder04" target="_blank" rel="noopener">GitHub →</a>
+<a class="btn" href="https://www.linkedin.com/in/aliuddinhyder4/" target="_blank" rel="noopener">LinkedIn ↗</a>
+</div>
+</div>
+<div class="hero-right">
+<div class="grid"></div><div class="big-letter">D</div>
+<div class="pipeline-art" aria-hidden="true">
+<div class="pipe-row"><div class="node">RAW CSV</div><div class="arrow">→</div><div class="node">AUTO LOADER</div><div class="arrow">→</div><div class="node">BRONZE</div></div>
+<div class="pipe-row"><div class="node">SILVER</div><div class="arrow">→</div><div class="node">DATA QUALITY</div><div class="arrow">→</div><div class="node">GOLD</div></div>
+<div class="pipe-row"><div class="node">AIRFLOW</div><div class="arrow">↗</div><div class="node">DATABRICKS</div><div class="arrow">→</div><div class="node">BI / SQL</div></div>
+</div>
+<div class="hero-stats reveal">
+<div class="stat"><div class="stat-num">9<span>.15</span></div><div class="stat-label">M.Tech CGPA</div></div>
+<div class="stat"><div class="stat-num">ETL<span>+</span></div><div class="stat-label">Pipeline Focus</div></div>
+<div class="stat"><div class="stat-num">3<span>+</span></div><div class="stat-label">Featured Projects</div></div>
+<div class="stat"><div class="stat-num">26<span>'</span></div><div class="stat-label">Graduating Year</div></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="divider"><div class="divider-line"></div><div class="divider-label">§ About Me</div><div class="divider-line"></div></div>
+<div class="section-head"><h2>Who I <em>Am</em></h2><span class="section-num">01 / 05</span></div>
+<div class="about-grid">
+<div class="about-body reveal">
+<p>I'm an M.Tech Computer Science graduate focused on <strong>Data Engineering and Data Analytics</strong>. I enjoy building systems that make data easier to ingest, validate, transform, model and analyze.</p>
+<p>My strongest portfolio work is an incremental e-commerce ETL pipeline built with PySpark, Databricks, Delta Lake and Apache Airflow, using Bronze/Silver/Gold layers, data-quality gates and incremental processing.</p>
+</div>
+<div class="about-sidebar reveal">
+<div class="sidebar-block"><div class="sidebar-key">Focus</div><div class="sidebar-val">Data Engineering · Data Analytics</div></div>
+<div class="sidebar-block"><div class="sidebar-key">Core Stack</div><div class="sidebar-val">Python · SQL · PySpark · Databricks · Airflow</div></div>
+<div class="sidebar-block"><div class="sidebar-key">Analytics</div><div class="sidebar-val">Pandas · NumPy · Power BI · Tableau · EDA</div></div>
+<div class="sidebar-block"><div class="sidebar-key">Based In</div><div class="sidebar-val">Warangal, Telangana, India</div></div>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="divider"><div class="divider-line"></div><div class="divider-label">§ Education</div><div class="divider-line"></div></div>
+<div class="section-head"><h2>Academic <em>Record</em></h2><span class="section-num">02 / 05</span></div>
+<div class="edu-grid">
+<div class="edu-card reveal"><div class="edu-degree">M.Tech — CSE</div><div class="edu-institute">Vaagdevi Engineering College · Affiliated to JNTUH</div><div class="edu-meta"><span class="edu-tag">2024 – 2026</span></div><div class="edu-cgpa">CGPA 9.15 / 10</div></div>
+<div class="edu-card reveal"><div class="edu-degree">B.Tech — CSE</div><div class="edu-institute">Vaagdevi Engineering College · Affiliated to JNTUH</div><div class="edu-meta"><span class="edu-tag">2019 – 2023</span></div><div class="edu-cgpa">CGPA 7.7 / 10</div></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="divider"><div class="divider-line"></div><div class="divider-label">§ Selected Work</div><div class="divider-line"></div></div>
+<div class="section-head"><h2>Data <em>Projects</em></h2><span class="section-num">03 / 05</span></div>
+<div class="projects">
+<a class="project reveal" href="https://github.com/mdaliuddinhyder04/Ecommerce-Data-Engineering-Pipeline" target="_blank" rel="noopener">
+<div class="project-num">01</div><div><div class="project-name">E-Commerce Incremental ETL Pipeline</div><div class="project-desc">End-to-end incremental pipeline using PySpark, Databricks Auto Loader and Delta Lake. Implements Bronze/Silver/Gold Medallion Architecture, cleansing, deduplication, Delta MERGE/upserts, data-quality validation, quarantine/quality gates and Airflow orchestration.</div><span class="project-tag">PySpark · Databricks · Delta Lake · Airflow · ETL · Data Quality</span></div><div class="project-arrow">↗</div>
+</a>
+<a class="project reveal" href="https://github.com/mdaliuddinhyder04/Hierarchical-Resource-Intelligence-Iot" target="_blank" rel="noopener">
+<div class="project-num">02</div><div><div class="project-name">Hierarchical Resource Intelligence — IoT</div><div class="project-desc">Integrated multi-tier Cloud, Edge and IoT telemetry into a unified dataset for resource-allocation classification and prediction, with EDA, comparative model evaluation and a Flask workflow for single-record and batch-CSV predictions.</div><span class="project-tag">Python · Pandas · NumPy · Scikit-Learn · TensorFlow · Flask</span></div><div class="project-arrow">↗</div>
+</a>
+<a class="project reveal" href="https://github.com/mdaliuddinhyder04/Customer-Segmentation" target="_blank" rel="noopener">
+<div class="project-num">03</div><div><div class="project-name">Customer Segmentation & Analytics</div><div class="project-desc">Customer analytics project covering preprocessing, visualization, clustering and classification to identify customer groups and support data-driven business decisions. Includes Flask integration and IBM Watson Machine Learning deployment work.</div><span class="project-tag">Python · Pandas · NumPy · Scikit-Learn · EDA · ML</span></div><div class="project-arrow">↗</div>
+</a>
+<a class="project reveal" href="https://www.ijiee.org/index.php/ijiee/article/view/1185" target="_blank" rel="noopener">
+<div class="project-num">04</div><div><div class="project-name">Published Research — IoT Resource Intelligence</div><div class="project-desc">Published research on multi-tier IoT allocation classification and resource-ratio prediction in the International Journal of Information and Electronics Engineering (IJIEE), Volume 16, Issue 2, 2026.</div><span class="project-tag">Research · IoT · Classification · Regression · Deep Learning</span></div><div class="project-arrow">↗</div>
+</a>
+</div>
+</section>
+
+<section id="skills">
+<div class="divider"><div class="divider-line"></div><div class="divider-label">§ Technical Stack</div><div class="divider-line"></div></div>
+<div class="section-head"><h2>Tools I <em>Use</em></h2><span class="section-num">04 / 05</span></div>
+<div class="skills-grid">
+<div class="skill reveal"><div class="skill-icon">🐍</div><div class="skill-name">Python</div><div class="skill-sub">Programming</div></div>
+<div class="skill reveal"><div class="skill-icon">SQL</div><div class="skill-name">SQL</div><div class="skill-sub">Analytics & DBMS</div></div>
+<div class="skill reveal"><div class="skill-icon">⚡</div><div class="skill-name">PySpark</div><div class="skill-sub">Distributed Data</div></div>
+<div class="skill reveal"><div class="skill-icon">◆</div><div class="skill-name">Databricks</div><div class="skill-sub">Data Platform</div></div>
+<div class="skill reveal"><div class="skill-icon">Δ</div><div class="skill-name">Delta Lake</div><div class="skill-sub">Lakehouse</div></div>
+<div class="skill reveal"><div class="skill-icon">◫</div><div class="skill-name">Apache Airflow</div><div class="skill-sub">Orchestration</div></div>
+<div class="skill reveal"><div class="skill-icon">☁</div><div class="skill-name">AWS S3</div><div class="skill-sub">Cloud Storage</div></div>
+<div class="skill reveal"><div class="skill-icon">📊</div><div class="skill-name">Pandas / NumPy</div><div class="skill-sub">Data Analysis</div></div>
+<div class="skill reveal"><div class="skill-icon">▦</div><div class="skill-name">Power BI</div><div class="skill-sub">Business Intelligence</div></div>
+<div class="skill reveal"><div class="skill-icon">◈</div><div class="skill-name">Tableau</div><div class="skill-sub">Visualization</div></div>
+<div class="skill reveal"><div class="skill-icon">✓</div><div class="skill-name">Data Quality</div><div class="skill-sub">Validation</div></div>
+<div class="skill reveal"><div class="skill-icon">↻</div><div class="skill-name">ETL / ELT</div><div class="skill-sub">Pipelines</div></div>
+</div>
+<div class="metrics" style="margin-top:38px">
+<div class="metric"><div class="metric-value">Bronze</div><div class="metric-label">Raw / Incremental</div></div>
+<div class="metric"><div class="metric-value">Silver</div><div class="metric-label">Clean / Transform</div></div>
+<div class="metric"><div class="metric-value">Gold</div><div class="metric-label">Analytics Ready</div></div>
+<div class="metric"><div class="metric-value">BI</div><div class="metric-label">Insights / Reporting</div></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="divider"><div class="divider-line"></div><div class="divider-label">§ Contact</div><div class="divider-line"></div></div>
+<div class="section-head"><h2>Let's work with <em>data</em></h2><span class="section-num">05 / 05</span></div>
+<div class="contact-wrap">
+<div class="reveal">
+<div class="contact-headline">Build reliable pipelines. <em>Find useful signals.</em></div>
+<p class="contact-sub">Open to entry-level Data Engineer, ETL Developer and Data Analyst opportunities.</p>
+<a class="contact-link" href="mailto:mohammedaliuddinhyder04@gmail.com">✉ Email — mohammedaliuddinhyder04@gmail.com</a>
+<a class="contact-link" href="https://www.linkedin.com/in/aliuddinhyder4/" target="_blank" rel="noopener">in LinkedIn — Aliuddin Hyder</a>
+<a class="contact-link" href="https://github.com/mdaliuddinhyder04" target="_blank" rel="noopener">⌘ GitHub — mdaliuddinhyder04</a>
+<a class="contact-link" href="resume.pdf" target="_blank" rel="noopener">↓ Download Resume</a>
+</div>
+<div class="reveal">
+<form id="contact-form" action="https://formspree.io/f/xykbwqko" method="POST">
+<div class="form-field"><label>Your Name</label><input type="text" name="name" autocomplete="name" required></div>
+<div class="form-field"><label>Email Address</label><input type="email" name="email" autocomplete="email" required></div>
+<div class="form-field"><label>Message</label><textarea name="message" required></textarea></div>
+<input type="hidden" name="_subject" value="Portfolio contact — Mohammed Aliuddin Hyder">
+<button class="send" type="submit">Send Message →</button>
+<p id="form-status" role="status"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="footer-logo">Hyder<span>.</span></div><div class="footer-copy">© 2026 · Data Engineering & Analytics</div></footer>
+
+<script>
+const cursor=document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const form=document.getElementById('contact-form'),status=document.getElementById('form-status');
+form.addEventListener('submit',async e=>{
+ e.preventDefault(); status.textContent='Sending…'; status.style.color='';
+ try{
+   const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+   if(r.ok){status.textContent='✓ Message sent successfully.';status.style.color='#3e7652';form.reset();}
+   else{status.textContent='Could not send. Please use the email link instead.';status.style.color='#c84b2f';}
+ }catch(err){status.textContent='Network error. Please use the email link instead.';status.style.color='#c84b2f';}
+});
+</script>
+</body>
+</html>
